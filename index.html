@@ -26,5 +26,39 @@
             <button id="score_filter" type="submit">Filter chart</button>
         </label>
     </div>
+    <h2>Write up</h2>
+
+    <p> This visualization is answering the question, <b>How stressful was for the participant students to get a grade above a chosen limit?</b> 
+    With this goal in mind I decided to go with a bar chart that summarizes the overall stress level by averaging the electrodermal
+     activity (a meassurement of stress) of each student during a given exam. Another alternative that I was considering was plotting
+    lines that showed how each students EDA changed during the exam, which is a great option if you care about the change on their EDA
+     over time but for this visualization this information is not that relevnt, what is more important is to understand how stressful was
+    an exam overall for each student, and how does it relate to their grades.</p>
+
+    <p> Now because the main thing that I want to be able to compare between students is stress, I took the descision of using the bar chart with the height
+        representing how stressed was the student during the exam, while this choice undermines the scores of each student, I believe it was the right call. For 
+        the purpose of answering my question being able to compare scores is not as relevant as comparing their stress, so this allows me to push the scores to the 
+        background while also using the interactiveness to make up for this. The first thing to note is that because of the lack of representation of scores 
+        in my visualization, I decided to make it so that whenever you hover over one of the students bar you don't only see the exact heigh of the bar but you 
+        also get the score that the student got in that exam. Additionally, since my question care about the strees of students scoring above something, the second 
+        feature of my interactive visualization is a filter that allows you to ignore all students that didn't met the criteria of scoring higher than your chosen value.
+        This way you can see how stressful was for the students that did well in the exam to get that score.</p>
+    
+    <p> Lastly, the data I took from physionet came with stress and scores of students for three different exams, since each student also has an effect to the stress levels
+        they show, I thought it would be a great insight to compare the stress levels of the smae student when scoring differently, for that reason I added a interactive selector 
+        on the top that allows you to switch between the three exams that the students took. Not only this but the hover interaction updates with the distribution (both scores and EDA).
+    </p>
+    <p> I unfortunately didn't find a team on time even with the edstem post to find a team after the deadline I wasn't able to find one, because of this all this project was done by just me(1 person)
+        and it tookme about 10-12 hours to complete. (I am avoding any personal idetification for purposes of the peer review). Getting the bar graph started was the longest part of the project both because of the 
+    time I was reflecting on my options and the tiem I was familiarizing my self with d3, but the hardest thing to implement for me was the score filter </p>
+
+        <h3>About the data</h3>
+        <p>
+            the data came in a zip with folders for each student, each folder contained three subfolder (one for each exam), and each folder had a EDA csv file, 
+            to do this project I took the mean of all the EDA csvs and made trheee arrays one for each exam. also the scores where given outside of the student folders so I put them into three arrays again.
+            Its also worth noticing that not each EDA csv had the same number of observations mainly because, not every student last the same amount of time in the exams. 
+        </p>
+        <h3>Data citation</h3>
+        <p>Amin, M. R., Wickramasuriya, D., & Faghih, R. T. (2022). A Wearable Exam Stress Dataset for Predicting Cognitive Performance in Real-World Settings (version 1.0.0). PhysioNet. https://doi.org/10.13026/kvkb-aj90.</p>
 </body>
 </html>
