@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress and exam performance</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <h1>How does stress affect your Exam performance?</h1>
+    <h3 class="chart_legend">A Bar Chart of students electrodermal activity over an exam.</h3>
+    <div id="exam_changer">
+        <label for="current_exam">Choose an exam:
+            <select id="current_exam" name="exam">
+                <option value='Mid1'>Midterm 1</option>
+                <option value='Mid2'>Midterm 2</option>
+                <option value="Final">Final</option>
+            </select>
+        </label>
+    </div>
+    <svg id="stress-graph"></svg>
+    <div id="score-filter">
+        <label for="score">Choose a minimum score (out of 100):
+            <input type="number" id="min_score" name="score" min="0" max="100" value="0">
+            <button id="score_filter" type="submit">Filter chart</button>
+        </label>
+    </div>
+</body>
+</html>

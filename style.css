@@ -1,0 +1,22 @@
+body {
+    /* Set line height to 1.5 times the font size
+         and use the OS’s UI font as the website font
+       */
+    font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: auto;
+    padding-left: 76px;
+    padding-right: 50px;
+  }
+
+  h1 {
+    line-height: 1.1;
+    text-wrap: balance;
+    font-size: 277%;
+  }
+  
+  /* Make it so the all h3 with class "chart_legend"  are not bold and are smaller*/
+    h3.chart_legend {
+        font-weight: normal;
+        font-size: 97%;
+    }
